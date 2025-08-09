@@ -73,40 +73,60 @@ const Header = () => {
       </div>
 
       {/* Mobile Nav with framer-motion */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={mobileMenuVariants}
-            className="md:hidden bg-white px-6 py-4 space-y-4 text-gray-600 overflow-hidden"
-          >
-            <a href="/" className="block hover:text-orange-500">
-              Home
-            </a>
-            <a href="#Story" className="block hover:text-orange-500">
-              Story
-            </a>
-            <a href="#product" className="block hover:text-orange-500">
-              Products
-            </a>
-            <a href="#Faqs" className="block hover:text-orange-500">
-              FAQs
-            </a>
-            <a href="#Contact" className="block hover:text-orange-500">
-              Contact
-            </a>
-            <div className="flex gap-4 pt-4 border-t">
-              <FiUser size={20} className="cursor-pointer hover:text-orange-500" />
-              <FiShoppingCart
-                size={20}
-                className="cursor-pointer hover:text-orange-500"
-              />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+<AnimatePresence>
+  {isOpen && (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      variants={mobileMenuVariants}
+      className="md:hidden bg-white px-6 py-4 space-y-4 text-gray-600 overflow-hidden"
+    >
+      <a
+        href="/"
+        className="block hover:text-orange-500"
+        onClick={() => setIsOpen(false)}
+      >
+        Home
+      </a>
+      <a
+        href="#story"
+        className="block hover:text-orange-500"
+        onClick={() => setIsOpen(false)}
+      >
+        Story
+      </a>
+      <a
+        href="#products"
+        className="block hover:text-orange-500"
+        onClick={() => setIsOpen(false)}
+      >
+        Products
+      </a>
+      <a
+        href="#faqs"
+        className="block hover:text-orange-500"
+        onClick={() => setIsOpen(false)}
+      >
+        FAQs
+      </a>
+      <a
+        href="#Contact"
+        className="block hover:text-orange-500"
+        onClick={() => setIsOpen(false)}
+      >
+        Contact
+      </a>
+      <div className="flex gap-4 pt-4 border-t">
+        <FiUser size={20} className="cursor-pointer hover:text-orange-500" />
+        <FiShoppingCart
+          size={20}
+          className="cursor-pointer hover:text-orange-500"
+        />
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
     </header>
   );
 };
