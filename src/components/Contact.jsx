@@ -32,7 +32,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     
-    // Form validation
     if (!formData.name || !formData.email || !formData.message) {
       setFormState({
         status: 'error',
@@ -41,8 +40,6 @@ const Contact = () => {
       return
     }
     
-    // In a real application, you'd want to send the form data to a server here
-    // For demonstration purposes, we'll just simulate a successful submission
     setFormState({
       status: 'loading',
       message: 'Sending your message...'
@@ -54,7 +51,6 @@ const Contact = () => {
         message: 'Your message has been sent successfully! I will get back to you soon.'
       })
       
-      // Clear form
       setFormData({
         name: '',
         email: '',
@@ -65,7 +61,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900" ref={ref}>
+    <section id="contact" className="py-20" ref={ref}>
       <div className="section-container">
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -77,29 +73,29 @@ const Contact = () => {
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full ">
                   <FiPhone size={20} />
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Phone</h4>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1">01067118139</p>
+                  <h4 className="text-lg font-semibold">Phone</h4>
+                  <p className="text-gray-600">01067118139</p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full ">
                   <FiMail size={20} />
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1">maged.mego2018@gmail.com</p>
+                  <h4 className="text-lg font-semibold">Email</h4>
+                  <p className="text-gray-600">maged.mego2018@gmail.com</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-12">
               <h3 className="text-2xl font-bold mb-6">Connect With US</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <p className="text-gray-600">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
               <div className="flex space-x-4">
@@ -112,12 +108,12 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md"
+            className="bg-gray-50 rounded-xl"
           >
             <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label htmlFor="name" className="block text-sm font-medium">
                   Name <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -126,14 +122,14 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 outline-none transition-all"
                   placeholder="Your name"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                   Email <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -142,14 +138,14 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 outline-none transition-all"
                   placeholder="Your email address"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label htmlFor="subject" className="block text-sm font-medium">
                   Subject
                 </label>
                 <input
@@ -158,13 +154,13 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-transparent outline-none transition-all"
                   placeholder="Subject of your message"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label htmlFor="message" className="block text-sm font-medium">
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -173,7 +169,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="Your message"
                   required
                 />
@@ -182,10 +178,10 @@ const Contact = () => {
               {formState.status !== 'idle' && (
                 <div className={`p-3 rounded-lg text-sm ${
                   formState.status === 'error' 
-                    ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' 
+                    ? 'bg-red-100 text-red-700' 
                     : formState.status === 'success'
-                      ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                      : 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
+                      ? 'bg-green-100 text-green-700'
+                      : 'bg-blue-100 text-blue-700'
                 }`}>
                   {formState.message}
                 </div>

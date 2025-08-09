@@ -111,7 +111,7 @@ const Header = () => {
         FAQs
       </a>
       <a
-        href="#Contact"
+        href="#contact"
         className="block hover:text-orange-500"
         onClick={() => setIsOpen(false)}
       >
