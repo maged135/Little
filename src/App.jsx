@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import Home from './components/home'
+import Home from './components/Home'
 import Story from './components/Story'
 import Faqs from './components/Faqs'
 import Contact from './components/Contact'

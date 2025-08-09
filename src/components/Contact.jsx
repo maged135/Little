@@ -67,7 +67,6 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900" ref={ref}>
       <div className="section-container">
->
 
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div
