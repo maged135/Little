@@ -4,12 +4,10 @@ import Story from './components/Story'
 import Faqs from './components/Faqs'
 import Contact from './components/Contact'
 import Product from './components/Product'
-
 import Footer from './components/Footer'
 import { motion } from 'framer-motion'
 
 function App() {
-
 
   return (
     <div className="min-h-screen bg-white ">
