@@ -23,7 +23,7 @@ const Home = () => {
     >
       <div className="absolute inset-0 bg-black/30 z-10"></div>
 
-      <div className="relative z-20 max-w-full w-full mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-x-8 text-white min-h-screen">
+      <div className="relative z-20 max-w-full w-full mx-auto p-[100px] flex flex-col md:flex-row items-center justify-center gap-x-8 text-white min-h-screen">
         <div className="w-full md:w-2/3 text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold drop-shadow-lg">
             Talk to us

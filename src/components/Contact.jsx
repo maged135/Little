@@ -61,7 +61,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20" ref={ref}>
+    <section id="contact" className="py-20 text-black" ref={ref}>
       <div className="section-container">
 
         <div className="grid md:grid-cols-2 gap-12">
